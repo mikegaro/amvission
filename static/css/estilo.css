@@ -1,5 +1,6 @@
 html {
     font-size: 16px;
+    
   }
   
   body {
@@ -9,39 +10,34 @@ html {
   .top {
     background-position: center center;
     background-size: cover;
-    width: 90%;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
+    max-width: 1600px
   }
 
   .contenedor {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  .logo-container{
-    align-items: center;
-    display:flex;
-    margin: 0;
+    margin: 5px 0;
   }
 
   .logo-img {
-      display: inline;
-  }
+    display: flex;
+    height: 50px;
+    vertical-align: middle;
+    }
 
   .logo-img img {
-    max-width: 120px;
-    object-fit: cover;
+    margin-right: 5px;
   }
 
-  .logo-container p {
+  .logo-img p {
       font-size: 20px;
       font-family: 'Open Sans', sans-serif;
-      color: grey;
-      margin-right: 60px;
+      margin: auto 0;
   }
 
-  .logo-container p:hover {
+  .logo-img p:hover {
       color:black;
   }
 
@@ -80,36 +76,66 @@ html {
     border-color: white;
   }
 
+@media(max-width: 1050px){
+  .contenedor {
+    height: auto;
+    margin: auto;
+  }
+/*  
+  .navegador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+*/
+  .navegador a{
+    font-size: 15px;
+    margin-right: 10px;
+  }
+  
+  .logo-img img {
+    margin:0;
+  }
+}
+
   #buscador {
     background: url(/static/img/encuentro_empresarial.png);
     background-repeat: no-repeat;
     height: 900px;
     background-size: cover;
-    padding-top: 60px;
+    margin: 0;
+    justify-content: center;
+  }
+  
+  .buscador-container {
+    max-width: 1600px;
+    margin: 0 auto;
     min-height: 100%;
     justify-content: space-between;
     display: flex;
   }
   
-  #buscador div {
-    margin-left: 5rem;
+  .buscador-container div {
     max-width: max-content;
     min-width: fit-content;
+    max-width: 1600px;
+    padding-left: 30px
   }
   
-  #buscador div h1{
+  .buscador-container div h1{
     padding: 10px 0px 10px 15px;
     color: white;
     font-size: 60px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
 
 
-  #buscador div p{
+  .buscador-container div p{
     padding: 10px 15px;
     font-size: 23px;
     border-radius: 25px;
     color: white;
+    margin: 0;
   }
   
   .logo-completo {
@@ -121,6 +147,23 @@ html {
     right: 50px;
     bottom: 30px;
   }
+  
+  @media(max-width: 1050px){
+    #buscador {
+      height: 600px;
+    }
+    
+    .buscador-container div h1{
+      font-size: 50px;
+      margin:0;
+    }
+    
+    .buscador-container div p {
+      font-size: 17px;
+      padding: 5px 15px;
+      margin: 0;
+    }
+}
   
   #caracteristicas {
     width: 80%;
@@ -167,65 +210,5 @@ html {
   
   footer nav a {
     text-decoration: none;
-  }
-  
-  
-  #formulario form {
-    
-    width: 50%;
-    margin: 30px auto 60px  auto;
-    text-align:center;
-    font-size: 40px;
-  }
-  
-  #formulario form input {
-    margin: 0px 0 40px 0;
-    background-color: rgb(212,0,120);
-    color: white;
-  }
-  
-  #response-form {
-    width:50%;
-    margin: 30px auto 60px auto;
-    text-align:center;
-    font-size: 40px;
-  }
-  
-  #incorrecto {
-    background: url(../jejeje.jpg);
-    min-height: 400px;
-    padding: 150px 0 0 0;
-  }
-  
-  #incorrecto div {
-    width: 60%;
-    margin: 0 auto 0  auto;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  #incorrecto div a{
-    text-decoration: none;
-    padding: 10px 15px 10px 15px;
-    background-color: rgb(212,0,120);
-    border-radius: 25px;
-    border-width: 4px;
-    border-style: solid;
-    border-color: rgb(255,0,150);
-    color: white;
-    font-size: 20px;
-    text-align: center;
-  }
-  
-  #incorrecto div p{
-    padding: 5px;
-    font-size: 23px;
-    text-align: center;
-    background-color: rgb(255,0,0);
-    color: white;
-    border-radius: 30px;
-    border-width: 3px;
-    border-style:solid;
-    border-color: rgb(212,0,120);
   }
   
